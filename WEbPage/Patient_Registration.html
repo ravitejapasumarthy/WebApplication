@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <title>Patient Registration</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	  <link rel="icon" href="altrasys.jpg">
+	  <style>
+			  body, html {
+			height: 100%;
+				}
+				.bg {
+			/* The image used */
+			background-image: url("https://images3.alphacoders.com/749/thumb-1920-749383.png");
+
+			/* Full height */
+			height: 100%;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+				}
+	  </style>
+	  <style>
+			/* Center the loader */
+			#loader {
+			  position: absolute;
+			  left: 50%;
+			  top: 50%;
+			  z-index: 1;
+			  width: 150px;
+			  height: 150px;
+			  margin: -75px 0 0 -75px;
+			  border: 16px solid #f3f3f3;
+			  border-radius: 50%;
+			  border-top: 16px solid #3498db;
+			  width: 120px;
+			  height: 120px;
+			  -webkit-animation: spin 2s linear infinite;
+			  animation: spin 2s linear infinite;
+			}
+
+			@-webkit-keyframes spin {
+			  0% { -webkit-transform: rotate(0deg); }
+			  100% { -webkit-transform: rotate(360deg); }
+			}
+
+			@keyframes spin {
+			  0% { transform: rotate(0deg); }
+			  100% { transform: rotate(360deg); }
+			}
+
+			/* Add animation to "page content" */
+			.animate-bottom {
+			  position: relative;
+			  -webkit-animation-name: animatebottom;
+			  -webkit-animation-duration: 1s;
+			  animation-name: animatebottom;
+			  animation-duration: 1s
+			}
+
+			@-webkit-keyframes animatebottom {
+			  from { bottom:-100px; opacity:0 } 
+			  to { bottom:0px; opacity:1 }
+			}
+
+			@keyframes animatebottom { 
+			  from{ bottom:-100px; opacity:0 } 
+			  to{ bottom:0; opacity:1 }
+			}
+
+			#myDiv {
+			  display: none;
+			  text-align: center;
+			}
+			</style>
+			<script>
+			var myVar;
+
+			function myFunction() {
+				myVar = setTimeout(showPage, 2000);
+			}
+
+			function showPage() {
+			  document.getElementById("loader").style.display = "none";
+			  document.getElementById("myDiv").style.display = "block";
+			}
+			</script>
+</head>
+<body onload="myFunction()" style="margin:0;">
+<div class="bg">
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+<div class="container" >
+	<form class="well form-horizontal" action="Options_Page.html" method="post"  id="contact_form" name="contact_form">
+	<fieldset>
+	<legend><center><h1><b>Patient Registration</b></h1></center></legend><br>	
+	<!-- Text input--> 
+				  <div class="form-group">
+				  <label class="col-md-4 control-label">Name Of Patient :</label> 
+				  
+				  <div class="col-md-4 inputGroupContainer">
+				  <div class="input-group">
+				  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				  <input name="Name_Of_Patient" placeholder="Name Of Patient" class="form-control"  type="text">
+				  </div>
+				  </div>
+				  </div>
+	<!-- Text input--> 	
+				  <div class="form-group">
+				  <label class="col-md-4 control-label">Gender :</label>  
+				  <div class="col-md-4 inputGroupContainer">
+				  <div class="input-group">
+				  <label class="radio-inline"><input id='radio1' name='test' type='radio'>Male</label>
+				  <label class="radio-inline"><input id='radio1' name="test" type="radio">Female</label>
+				  
+				  </div>
+				  </div>
+				  </div>
+	<!-- Text input-->	
+				  <div class="form-group">
+				  <label class="col-md-4 control-label">Date Of Birth :</label>  
+				  <div class="col-md-4 inputGroupContainer">
+				  <div class="input-group">
+				  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+				  <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+				  </div>
+				  </div>
+				  </div>
+	<!-- Text input-->	
+				  <div class="form-group">
+				  <label class="col-md-4 control-label">Contact Number :</label>  
+				  <div class="col-md-4 inputGroupContainer">
+				  <div class="input-group">
+				  <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+				  <input class="form-control" id="cno" name="cno" placeholder="Contact Number" type="text"/>
+				  </div>
+				  </div>
+				  </div>
+	<!-- Text input-->	
+				  <div class="form-group">
+				  <label class="col-md-4 control-label">E-Mail ID :</label>  
+				  <div class="col-md-4 inputGroupContainer">
+				  <div class="input-group">
+				  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+				  <input class="form-control" id="Mail" name="cno" placeholder="E-Mail ID" type="text"/>
+				  </div>
+				  </div>
+				  </div>
+	<!-- Text input-->
+				  <div class="form-group">
+				  <label class="col-md-4 control-label">Permanent Address & Pincode :</label>  
+				  <div class="col-md-4 inputGroupContainer">
+				  <div class="input-group">
+				  <span class="input-group-addon"><i class="glyphicon glyphicon-tent"></i></span>
+				  <textarea class="form-control" rows="3" id="PAP" placeholder="Permanent Address & Pincode :" ></textarea>
+
+
+			
+				  </div>
+				  </div>
+				  </div>
+				  
+	<!-- Button -->
+			<div class="form-group">
+			<label class="col-md-4 control-label"></label>
+			<div class="col-md-4"><br>
+			<button type="submit" class="btn btn-success" >Submit <span class="glyphicon glyphicon-ok-sign"></span></button>
+			<button type="reset" class="btn btn-danger">clear <span class="glyphicon glyphicon-remove-sign"></span></button>
+			</div>
+			</div>
+			</div>
+			</div>
+			  
+</body>
+</html>

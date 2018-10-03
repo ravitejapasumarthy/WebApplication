@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <title>Cancer Stage</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<link rel="icon" href="altrasys.jpg">
+		<style>
+			  body, html {
+			height: 100%;
+			
+				}
+				.bg {
+			/* The image used */
+			background-image: url("https://images3.alphacoders.com/749/thumb-1920-749383.png");
+
+			/* Full height */
+			height: 100%;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+				}
+	  </style>
+	  <style>
+			/* Center the loader */
+			#loader {
+			  position: absolute;
+			  left: 50%;
+			  top: 50%;
+			  z-index: 1;
+			  width: 150px;
+			  height: 150px;
+			  margin: -75px 0 0 -75px;
+			  border: 16px solid #f3f3f3;
+			  border-radius: 50%;
+			  border-top: 16px solid #3498db;
+			  width: 120px;
+			  height: 120px;
+			  -webkit-animation: spin 2s linear infinite;
+			  animation: spin 2s linear infinite;
+			}
+
+			@-webkit-keyframes spin {
+			  0% { -webkit-transform: rotate(0deg); }
+			  100% { -webkit-transform: rotate(360deg); }
+			}
+
+			@keyframes spin {
+			  0% { transform: rotate(0deg); }
+			  100% { transform: rotate(360deg); }
+			}
+
+			/* Add animation to "page content" */
+			.animate-bottom {
+			  position: relative;
+			  -webkit-animation-name: animatebottom;
+			  -webkit-animation-duration: 1s;
+			  animation-name: animatebottom;
+			  animation-duration: 1s
+			}
+
+			@-webkit-keyframes animatebottom {
+			  from { bottom:-100px; opacity:0 } 
+			  to { bottom:0px; opacity:1 }
+			}
+
+			@keyframes animatebottom { 
+			  from{ bottom:-100px; opacity:0 } 
+			  to{ bottom:0; opacity:1 }
+			}
+
+			#myDiv {
+			  display: none;
+			  text-align: center;
+			}
+			</style>
+			<script>
+			var myVar;
+
+			function myFunction() {
+				myVar = setTimeout(showPage, 1000);
+			}
+
+			function showPage() {
+			  document.getElementById("loader").style.display = "none";
+			  document.getElementById("myDiv").style.display = "block";
+			}
+			</script>
+</head>
+<body onload="myFunction()" style="margin:0;">
+	<div class="bg">
+	<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+	<div class="container">
+	<form class="well form-horizontal" action="Result.html" method="post"  id="contact_form" name="contact_form">
+	<fieldset>
+
+	<!-- Form Name -->
+	<legend><center><h1><b>Cancer Stage</b></h1></center></legend><br>
+
+	<!-- Text input-->
+
+	  <div class="form-group">
+	  <label class="col-md-4 control-label">Tumour type</label>  
+	  <div class="col-md-4 inputGroupContainer">
+	  <div class="input-group"><label class="radio-inline"><input type="radio" name="optradio" value="Invasive">Invasive</label>
+	  <label class="radio-inline"><input type="radio" name="optradio" value="non-Invasive">Non-Invasive</label>  
+	  </div>
+	  </div>
+	  </div>
+
+<!-- Text input-->
+
+	  <div class="form-group">
+	  <label class="col-md-4 control-label" >Tumour Size</label> 
+	  <div class="col-md-4 inputGroupContainer">
+	  <div class="input-group">
+	  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+	  <input name="Tumour_Size" placeholder="Tumour Size" class="form-control"  type="text">
+	  </div>
+	  </div>
+	  </div>
+<!-- Text input-->
+		<div class="form-group"> 
+		<label class="col-md-4 control-label">Number of Lympho Nodes Involved</label>
+		<div class="col-md-4 inputGroupContainer">
+		<div class="input-group">
+		<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+		<input name="no_of_lympho" placeholder="Number of Lympho Nodes Involved" class="form-control"  type="text">
+		</div>
+		</div>
+		</div>
+	  
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">ER-Status</label>  
+  <div class="col-md-4 selectContainer">
+  <div class="input-group">
+ <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+ <select name="ER-Status" class="form-control selectpicker">
+      <option value="">Select ER-Status</option>
+      <option>Positive</option>
+      <option>Negative</option>
+      <option >Unknown</option>
+ 
+    </select>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >PR-Status</label> 
+   <div class="col-md-4 selectContainer">
+  <div class="input-group">
+ <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+ <select name="PR-Status" class="form-control selectpicker">
+      <option value="">Select PR-Status</option>
+      <option>Positive</option>
+      <option>Negative</option>
+      <option >Unknown</option>
+ 
+    </select>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >HER 2 IHC</label> 
+    <div class="col-md-4 selectContainer">
+  <div class="input-group">
+ <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+ <select name="HER_2_IHC" class="form-control selectpicker">
+      <option value="">Select HER 2 IHC</option>
+      <option>Positive</option>
+      <option>Negative</option>
+      <option >Unknown</option>
+ 
+    </select>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Tumour Grade</label>  
+  <div class="col-md-4 selectContainer">
+  <div class="input-group">
+ <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+ <select name="Tumour_Grade" class="form-control selectpicker">
+      <option value="">Select Tumour Grade</option>
+      <option>Positive</option>
+      <option>Negative</option>
+      <option >Unknown</option>
+ 
+    </select>
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Chest Wall involvement</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group"><label class="radio-inline"><input type="radio" name="optradio1">Yes</label>
+  <label class="radio-inline"><input type="radio" name="optradio1">No</label>  
+  </div>
+  </div>
+  </div>
+<!-- Text input-->
+  <div class="form-group">
+  <label class="col-md-4 control-label">Skin Change</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group"><label class="radio-inline"><input type="radio" name="optradio2">Yes</label>
+  <label class="radio-inline"><input type="radio" name="optradio2">No</label>  
+  </div>
+  </div>
+  </div>
+ <!-- Text input--> 
+  <div class="form-group">
+  <label class="col-md-4 control-label">Distant metastasis</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group"><label class="radio-inline"><input type="radio" name="optradio3">Yes</label>
+  <label class="radio-inline"><input type="radio" name="optradio3">No</label>  
+  </div>
+  </div>
+  </div>
+
+<!-- Button -->
+	<div class="form-group">
+	<label class="col-md-4 control-label"></label>
+	<div class="col-md-4"><br>
+    <button type="submit" class="btn btn-success" >Submit <span class="glyphicon glyphicon-ok-sign"></span></button>
+	<button type="reset" class="btn btn-danger">clear <span class="glyphicon glyphicon-remove-sign"></span></button>
+	<button type="reset" class="btn btn-warning" onClick="location.href='Options_Page.html'" >Back <span class="glyphicon glyphicon-arrow-left"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</div>
+	<!-- /.container -->
+	</div>
+	</div>
+</body>
+</html>
